@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<loginServer>ng1.wan5d.com</loginServer>
+	<loginPort>9072</loginPort>
+	<debug>false</debug>
+	<res>../res/</res>
+	<mapQuality>50</mapQuality>
+	<language>zhCN</language>
+	<!---  -->
+<IS_OLD_SERVICE>0</IS_OLD_SERVICE>
+	<jointOperations>wooduan</jointOperations>
+	<!---  -->
+	<district>1</district>
+</config>
+
+
