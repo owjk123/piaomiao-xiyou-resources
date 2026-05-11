@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<Window caption="0,0,0,0" layeredimage="" bktrans="true">
+
+        <Font id="0" name="宋体" size="12" shared="true"/>
+        <Font id="1" name="宋体" size="12" shared="true"/>
+
+		<HorizontalLayout bkimage="black.png">
+			
+			<VerticalLayout width="1024" height="650" bkimage="background-battle.jpg" name="background-battle" align="center">
+
+
+			<Label name="versiontxt" float="true" pos="20,40,0,0" width="120" height="13"
+                        align="left" font="1" textcolor="0x00b7b7b7" enablestroke="false"
+                        text="1.0.0.0" visible="false"/>
+						
+			<Button name="minbtn" float="true" pos="982,2,0,0" width="14" height="13"
+					align="center" normalimage="min.png" hotimage="min_hover.png" visible="false"/>
+
+			<Button name="closebtn" float="true" pos="1003,2,0,0" width="14" height="13"
+					align="center" normalimage="close.png" hotimage="close_hover.png" visible="false"/>
+						
+			
+
+					
+			<HorizontalLayout float="true" pos="118,505" width="800" height="33"  bkimage="bar-bg.png" >				
+				
+				<Progress name="bar" width="782" height="10" pos="8,7"
+					float="true" value="0" foreimage="bar.png"/>
+			</HorizontalLayout>
+			
+			
+			
+			
+			<HorizontalLayout float="true" pos="0,523" width="1020" height="28">
+				<Label name="statetxt" font="0" textcolor="0xb3b1b1" text="" align="center"/>
+			</HorizontalLayout>
+			
+			<HorizontalLayout float="true" pos="0,523" width="910" height="28">
+				<Label name="progressTxt"
+                        align="right" font="1" textcolor="0xb3b1b1" padding="0,0,5,0"
+                        text=""/>
+			</HorizontalLayout>
+		
+			<HorizontalLayout bkimage="loading_battle.png" float="true" pos="350,568" width="338" height="39"/>		
+			
+
+			<Label name="localtxt" float="true" pos="16,563,0,0" width="160" height="20"
+                        align="left" font="1" textcolor="0xffffff" enablestroke="false"
+                        text=""/>
+						
+			<Label name="remotetxt" float="true" pos="16,586,0,0" width="160" height="20"
+					align="left" font="1" textcolor="0xffffff" enablestroke="false"
+					text=""/>
+
+					
+			<Label name="updateModeTxt" float="true" pos="800,625,0,0" width="180" height="20"
+					align="left" font="1" textcolor="0x00b7b7b7" enablestroke="false" 
+					text=""/>
+					
+			<Label name="dltxt" float="true" pos="879,625,0,0" width="150" height="20"
+					align="left" font="1" textcolor="0x00b7b7b7" enablestroke="false"
+					text=""/>
+
+			<Label name="dlspeed" float="true" pos="950,625,0,0" width="150" height="20"
+				align="left" font="1" textcolor="0x00b7b7b7" enablestroke="false"
+				text=""/>
+
+					
+			
+
+
+					
+			
+        </VerticalLayout>
+	</HorizontalLayout>
+</Window>

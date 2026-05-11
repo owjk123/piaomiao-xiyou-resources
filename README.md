@@ -1,32 +1,55 @@
-# Piao Miao Xi You Flash Game Resources
+# Piaomiao Xiyou Flash Game Resources
 
-Resources extracted from the Flash game "Piao Miao Xi You" (飘渺西游).
+Resource collection from the Flash web game "Piaomiao Xiyou" (飘渺西游).
 
-## Source
+## Repository Structure
 
-Captured from official server at s1.wan5d.com using Flash Player and network monitoring.
+```
+├── swf/
+│   ├── core/                    # Core SWF files
+│   │   ├── Loading.swf          # Game loader (11KB)
+│   │   ├── Loading_uncompressed.swf
+│   │   ├── PmxyGame.swf         # Game entry (223KB)
+│   │   └── PmxyGame_uncompressed.swf
+│   ├── shared-library/          # Shared library
+│   │   └── ShareLib_5.5.3.swf   # Shared library (1.3MB)
+│   ├── game-module/             # Game module (XOR encrypted)
+│   │   ├── tangseng_5.5.1.swf   # v5.5.1 (18MB)
+│   │   ├── tangseng_5.5.3.swf   # v5.5.3 (18MB)
+│   │   └── tangseng_5.5.4.swf   # v5.5.4 (18MB)
+│   ├── game-module-decrypted/   # Game module (decrypted)
+│   │   ├── tangseng_5.5.1.swf   # v5.5.1 (18MB)
+│   │   ├── tangseng_5.5.3.swf   # v5.5.3 (18MB)
+│   │   └── tangseng_5.5.4.swf   # v5.5.4 (18MB)
+│   └── loading/                 # Loading related
+│       ├── wooduan_loading.swf  # Loading animation (27KB)
+│       └── tangseng_loader_2.0.3.jpg
+├── images/
+│   ├── extracted/               # Images extracted from tangseng.swf
+│   ├── microclient/             # Micro-client UI images
+│   └── login/                   # Login screen images
+├── website/                     # Original website files
+├── config/                      # Configuration files
+├── scripts/                     # Tool scripts
+└── docs/                        # Documentation
+```
 
-## Downloaded Files
+## Game Loading Chain
 
-### Core Game Files
-Located in `raw_resources/`:
-- `s62_PmxyGame.swf` - Main game entry point (223KB)
-- `wooduan_loading.swf` - Loading animation (27KB)
+Loading.swf → Config.xml → ShareLib.swf → Socket Login → PmxyGame.swf → tangseng.swf → /res/ resources
 
-### Configuration
-- `Config.xml` - Game server configuration
+## Encryption
 
-## Resource Analysis
+The game module tangseng.swf uses XOR encryption starting at byte offset 9473, XORed with value 2.
 
-Based on Config.xml, resources are located at `/res/` path:
-- Main game modules: `/res/tangseng.swf`
-- Shared library: `/res/ShareLib.swf`
-- UI resources: `/res/ui/*`
-- Map data: `/res/map/*`
-- Sound effects: `/res/sound/*`
+## Server Info
 
-Game connects to server `ng1.wan5d.com:9072` via Socket.
+- Login Server: ng1.wan5d.com:9072
+- Game Server: s1.wan5d.com
+- Game Version: 5.5.3
+- Loading Version: 0.2.9
+- Pre Version: 2.0.3
 
 ## License
 
-Extracted for educational and archival purposes only.
+This repository is for archival and research purposes only.
